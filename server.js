@@ -55,6 +55,8 @@ app.post('/', async (req, res) => {
     })
     .then((data) => data.choices[0].message.content)
 
+  console.log({ isQuestion })
+
   const isQuestionObject = JSON.parse(isQuestion)
 
   if (!isQuestionObject.value) {
