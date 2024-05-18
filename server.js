@@ -10,8 +10,11 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  console.log({ res })
-  console.log({ req })
+  const { question } = req.body
+  const reply = `Otrzymano pytanie: ${question}`
+
+  // Wyślij odpowiedź w formacie JSON
+  res.json({ reply })
 })
 
 app.listen(3000)
