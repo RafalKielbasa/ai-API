@@ -1,5 +1,5 @@
 import e from 'express'
-import { openai } from './helpers/openAI'
+import { openai } from './helpers/openai.js'
 
 const systemMessage = `
 Take a deep breath and focus.
