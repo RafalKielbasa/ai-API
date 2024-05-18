@@ -60,7 +60,8 @@ app.post('/', async (req, res) => {
   const isQuestionObject = JSON.parse(isQuestion)
 
   if (!isQuestionObject.value) {
-    return await prisma.info.create({ data: { info: question } })
+    await prisma.info.create({ data: { info: question } })
+    console.log(isQuestionObject)
   }
 
   const info = await prisma.info.findMany()
