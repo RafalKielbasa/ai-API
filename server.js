@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const { question } = req.body
   const reply = `Otrzymano pytanie: ${question}`
+  console.log(question)
 
   // Wyślij odpowiedź w formacie JSON
   res.json({ reply })
