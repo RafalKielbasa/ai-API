@@ -79,7 +79,12 @@ app.post('/', async (req, res) => {
   //   .then((data) => data.choices[0].message.content)
   // // // Wyślij odpowiedź w formacie JSON
   // res.json({ reply })
-  console.log({ req })
+
+  const {
+    body: { data },
+  } = req
+
+  console.log(JSON.stringify(data))
 })
 
 app.listen(3000)
